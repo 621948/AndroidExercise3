@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.exercise3.R
+
 import com.example.exercise3.viewmodels.AnimatedSpecificViewModel
 import kotlinx.coroutines.flow.collectLatest
 
