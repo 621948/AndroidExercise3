@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Exercise 3</string>
+    <string name="home_welcome_text">Welcome to the timer app!</string>
+    <string name="home_timer_button">Open timer</string>
+    <string name="home_animated_specific_button">Open Animated Specific</string>
+    <string name="timer_button_start">Start timer</string>
+    <string name="timer_button_stop">Stop timer</string>
+    <string name="back_to_home">Return to home</string>
+</resources>
