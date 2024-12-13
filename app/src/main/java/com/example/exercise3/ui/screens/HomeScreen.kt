@@ -17,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.exercise3.viewmodels.HomeViewModel
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 @Composable
 fun HomeScreen(
@@ -28,10 +29,15 @@ fun HomeScreen(
 
     LaunchedEffect(Unit) {
         Log.d("HomeScreen", "LaunchedEffect triggered")
-        viewModel.navigateToTimer.collectLatest { Log.d("HomeScreen", "Navigating to Timer")
-            onNavigateToTimer() }
-        viewModel.navigateToAnimatedSpecific.collectLatest {Log.d("HomeScreen", "Navigating to AniamtedSpecific")
-            onNavigateToAnimatedSpecific() }
+        launch {
+            viewModel.navigateToTimer.collectLatest { Log.d("HomeScreen", "Navigating to Timer")
+                onNavigateToTimer() }
+        }
+        launch {
+            viewModel.navigateToAnimatedSpecific.collectLatest {Log.d("HomeScreen", "Navigating to AniamtedSpecific")
+                onNavigateToAnimatedSpecific() }
+        }
+
     }
 
     Column(
